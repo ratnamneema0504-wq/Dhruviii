@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Dhruvi's Day ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+/* GLOBAL */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    background:#fff0f3;
+}
+
+/* DREAMY GLOW BACKGROUND */
+body::before{
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:radial-gradient(circle at 30% 30%,#ffb3c1 0%,transparent 40%),
+               radial-gradient(circle at 70% 70%,#ff8fa3 0%,transparent 40%);
+    animation:moveGlow 8s infinite alternate ease-in-out;
+    z-index:-3;
+}
+
+@keyframes moveGlow{
+    from{transform:translateY(-20px);}
+    to{transform:translateY(20px);}
+}
+
+/* HEART BACKGROUND */
+.heart-bg{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    overflow:hidden;
+    z-index:-2;
+}
+
+.heart{
+    position:absolute;
+    animation: popUp ease-out forwards;
+    opacity:0.9;
+    text-shadow:0 0 10px #ff4d6d,
+                0 0 20px #ff8fa3,
+                0 0 30px #ffb3c1;
+}
+
+@keyframes popUp{
+    0%{transform:translateY(100vh) scale(0);opacity:0;}
+    20%{opacity:1;transform:translateY(80vh) scale(1.5);}
+    100%{transform:translateY(-10vh) scale(1);opacity:0;}
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-family:'Great Vibes',cursive;
+    font-size:90px;
+    cursor:pointer;
+    background: linear-gradient(270deg,#ff4d6d,#ff8fa3,#ffb3c1,#ff4d6d);
+    background-size:600% 600%;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation: gradientMove 6s ease infinite, pulseGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+@keyframes pulseGlow{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.07);}
+    100%{transform:scale(1);}
+}
+
+.pickup{
+    margin-top:15px;
+    font-size:20px;
+    color:#c9184a;
+    font-style:italic;
+}
+
+.btn{
+    margin-top:30px;
+    padding:12px 30px;
+    background:#ff4d6d;
+    color:white;
+    border-radius:30px;
+    text-decoration:none;
+    transition:0.3s;
+}
+.btn:hover{
+    background:#c9184a;
+    transform:scale(1.05);
+}
+
+/* GALLERY */
+.gallery{
+    padding:80px 10%;
+    text-align:center;
+    background:white;
+}
+.grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+.card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:20px;
+    cursor:pointer;
+    transition:0.4s;
+}
+.card img:hover{
+    transform:scale(1.05);
+}
+
+/* MODAL */
+.modal{
+    position:fixed;
+    top:0;left:0;width:100%;height:100%;
+    background:rgba(0,0,0,0.7);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    animation:fadeIn 0.4s ease;
+}
+
+.modal-content{
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    max-width:500px;
+    width:90%;
+    text-align:center;
+    animation:zoomIn 0.4s ease;
+}
+
+.modal-content img{
+    width:100%;
+    border-radius:15px;
+    margin-bottom:15px;
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:30px;
+    font-size:35px;
+    color:white;
+    cursor:pointer;
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+@keyframes zoomIn{
+    from{transform:scale(0.7);}
+    to{transform:scale(1);}
+}
+
+/* SPECIAL SECTION */
+.special-section{
+    position:relative;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    overflow:hidden;
+}
+
+.special-section::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:url('couple.jpg.jpeg') center center/cover no-repeat;
+    z-index:-2;
+}
+
+.special-section::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.6);
+    z-index:-1;
+}
+
+.special-card{
+    background:rgba(255,255,255,0.95);
+    padding:40px;
+    border-radius:25px;
+    max-width:650px;
+    text-align:center;
+}
+
+.special-card h2{
+    font-family:'Great Vibes',cursive;
+    font-size:45px;
+    color:#764ba2;
+    margin-bottom:20px;
+}
+
+.typing{
+    border-right:3px solid #764ba2;
+    white-space:pre-wrap;
+    overflow:hidden;
+}
+
+</style>
+</head>
+
+<body>
+<audio id="bgMusic" autoplay loop muted>
+    <source src="audio.mp3.mpeg" type="audio/mpeg">
+</audio>
+
+<div class="heart-bg" id="heartBg"></div>
+
+<section class="hero">
+    <h1 onclick="explodeHearts()">Happy Dhruvi's Day 💖</h1>
+    <div class="pickup">
+    Funny how we ended up at the same place...
+        <br>  Coincidence or destiny? 🤔💕</br>
+    </div>
+    <a href="#gallery" class="btn">Start the Celebration 🎉</a>
+</section>
+
+<section class="gallery" id="gallery">
+    <h2>Our Beautiful Memories 📸</h2>
+    <div class="grid">
+        <div class="card"><img src="photo1.jpg.jpeg" onclick="openModal(this,0)"></div>
+        <div class="card"><img src="photo2.jpg.jpeg" onclick="openModal(this,1)"></div>
+        <div class="card"><img src="photo3.jpg.jpeg" onclick="openModal(this,2)"></div>
+        <div class="card"><img src="photo4.jpg.jpeg" onclick="openModal(this,3)"></div>
+        <div class="card"><img src="photo5.jpg.jpeg" onclick="openModal(this,4)"></div>
+        <div class="card"><img src="photo6.jpg.jpeg" onclick="openModal(this,5)"></div>
+        <div class="card"><img src="photo7.jpg.jpeg" onclick="openModal(this,6)"></div>
+        <div class="card"><img src="photo8.jpg.jpeg" onclick="openModal(this,7)"></div>
+    </div>
+</section>
+
+<section class="special-section">
+    <div class="special-card">
+        <h2>A Special Message for You 💌</h2>
+        <p class="typing" id="typeText"></p>
+    </div>
+</section>
+
+<div class="modal" id="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+        <img id="modalImg">
+        <p id="modalText"></p>
+    </div>
+</div>
+<script>
+const music = document.getElementById("bgMusic");
+
+document.addEventListener("click", function () {
+    music.muted = false;
+    music.volume = 0.3;
+    music.play();
+}, { once: true });
+
+/* Romantic Messages */
+const messages = [
+"You are my favorite person in the whole world ❤️",
+"Every moment with you feels magical ✨",
+"I fall in love with you more every day 💕",
+"Your smile is my happiest place 😊",
+"Life is beautiful because you are in it 💖",
+"Forever isn’t enough time with you 💞",
+"You are my today and all my tomorrows 💌",
+"My heart chose you, and it will always choose you ❤️"
+];
+
+function openModal(img,index){
+    document.getElementById("modal").style.display="flex";
+    document.getElementById("modalImg").src=img.src;
+    document.getElementById("modalText").innerText=messages[index];
+}
+
+function closeModal(){
+    document.getElementById("modal").style.display="none";
+}
+
+window.onclick=function(e){
+    if(e.target==document.getElementById("modal")){
+        closeModal();
+    }
+};
+
+/* Floating Hearts */
+function createHeart(){
+    const heart=document.createElement("div");
+    heart.classList.add("heart");   
+    heart.innerHTML="💖";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=(Math.random()*25+15)+"px";
+    heart.style.animationDuration=(Math.random()*3+3)+"s";
+    document.getElementById("heartBg").appendChild(heart);
+    setTimeout(()=>heart.remove(),6000);
+}
+setInterval(createHeart,250);
+
+function explodeHearts(){
+    for(let i=0;i<25;i++){ createHeart(); }
+}
+
+/* FINAL SPECIAL MESSAGE */
+const message=`Happy Birthday to the most amazing person in my life. 🎂❤️
+You are my happiness, my comfort, my greatest blessing, and my whole world. 🌎💖
+You are the best thing that has ever happened to me, and I truly cannot imagine my life without you. 🥺💕
+I feel so incredibly blessed to have you. Please never ever leave me, because you are the only one in my life with whom I can share everything. 🤞❤️
+I truly believe that we have a bright and beautiful future ahead of us. ✨💍
+I can't wait to be "Shourya Kabra" one day… please marry me soon, because I simply cannot live without you. 💖👰🤵💞`;
+
+let i=0;
+function typeMessage(){
+    if(i<message.length){
+        document.getElementById("typeText").innerHTML+=message.charAt(i);
+        i++;
+        setTimeout(typeMessage,40);
+    }
+}
+
+window.onload=typeMessage;
+</script>
+
+</body>
+</html>
